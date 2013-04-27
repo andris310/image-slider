@@ -1,0 +1,11 @@
+#carousel {
+	width: 600px;
+	height: 400px;
+	background-color: gray;
+	margin: auto; 
+	overflow: hidden;
+}
+
+#slider img {
+	float: left;
+}
