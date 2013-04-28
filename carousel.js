@@ -1,11 +1,22 @@
 var image = document.getElementById('image');
-var imgFirst = document.getElementsByTagName('img');
+var imgList = document.getElementsByTagName('img');
 var imgArray = [];
-for (i = 0; i < imgFirst.length; i+=1) {
-	imgArray.push(imgFirst[i].src);
+var tracker;
+
+for (i = 0; i < imgList.length; i+=1) {
+	imgArray.push(imgList[i].src);
 }
 
-var tracker;
+// image.style.opacity = 1;
+
+// function fadeOut () {
+// 	if (image.style.opacity >= 0) {
+// 		return;
+// 	}
+// 	image.style.opacity -= 0.1;
+// }
+
+// var timer = setInterval(fadeOut, 10);
   
 function next() {
 	for( i = 0; i < imgArray.length; i += 1) {
@@ -31,6 +42,11 @@ function previous() {
 			}
 		}
 	}
-	
 	return (image.src = tracker);
 }
+
+var nextButton = document.getElementById('next');
+var previousButton = document.getElementById('previous');
+
+nextButton.onclick = next;
+previousButton.onclick = previous;
