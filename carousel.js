@@ -15,14 +15,13 @@ function fadeIn() {
 	image.style.opacity = parseFloat(image.style.opacity, 10) + 0.01;
 }
 
-function fadeOut() {
-	if (image.style.opacity <= 0) {
-		return;
-	}
-	image.style.opacity -= 0.01; 
-}
+// function fadeOut() {
+// 	if (image.style.opacity <= 0) {
+// 		return;
+// 	}
+// 	image.style.opacity -= 0.01; 
+// }
 
-// var timer = setInterval(fadeIn, 10);
   
 function next() {
 	image.style.opacity = 0;
