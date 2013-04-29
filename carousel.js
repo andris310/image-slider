@@ -32,6 +32,7 @@ function next() {
 }
 
 function previous() {
+	image.style.opacity = 0;
 	for( i = 0; i < imgArray.length; i += 1) {
 		if(image.src === imgArray[i]) {
 			if (image.src === imgArray[0]) {
@@ -48,11 +49,14 @@ function previous() {
 var nextButton = document.getElementById('next');
 var previousButton = document.getElementById('previous');
 
-// nextButton.onclick = next;
 nextButton.onclick = function() {
 	clearInterval(timer);
 	timer = setInterval(fadeIn, 10);
 	next(); 
 }
 
-previousButton.onclick = previous;
+previousButton.onclick = function() { 
+	clearInterval(timer);
+	timer = setInterval(fadeIn, 10);
+	previous();
+}
