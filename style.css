@@ -9,3 +9,13 @@
 #slider img {
 	float: left;
 }
+
+#controls {
+	margin: auto;
+	width: 120px;
+	margin-top: 10px;
+}
+
+/*img#image {
+	opacity: 1;
+}*/
