@@ -8,11 +8,18 @@ for (i = 0; i < imgList.length; i+=1) {
 	imgArray.push(imgList[i].src);
 }
 
-function fadeIn () {
+function fadeIn() {
 	if (image.style.opacity >= 1) {
 		return;
 	}
 	image.style.opacity = parseFloat(image.style.opacity, 10) + 0.01;
+}
+
+function fadeOut() {
+	if (image.style.opacity <= 0) {
+		return;
+	}
+	image.style.opacity -= 0.01; 
 }
 
 // var timer = setInterval(fadeIn, 10);
